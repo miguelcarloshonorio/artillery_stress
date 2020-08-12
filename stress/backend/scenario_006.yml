@@ -1,0 +1,19 @@
+config:
+  target: 'https://hml-mex-api.avabrasil.com/feed-posts?limit=100'
+  phases:
+    - duration: 1
+      arrivalRate: 10
+      name: "Sustained load"
+  # processor: "./../config.js"
+scenarios:
+  - flow:
+    - get:
+        url: "/"
+        headers:
+            Content-Type: "application/json"
+            Accept: application/json
+            Cookie: 
+              io=uGTGo746DcTTHN7kAAAr
+              auth=s%3AiRLbDXER9o3hXaU-DwCUr8oNqGITzSPQ.xeqZOBMp%2BZEVtcWYqKOBTtuHjiunP9zzx5QKPQUh804
+              
+        # beforeRequest: "beforeRequest"
